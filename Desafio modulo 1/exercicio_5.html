@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+</body>
+<script>
+    function timeDev(teamMembers) {
+        for (members of teamMembers) {
+            console.log("O " + members.nome + " possui as habilidades: " + members.habilidades.join(', '))
+        }
+    }
+
+    var usuarios = [
+        {
+            nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]
+        },
+        {
+            nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+        }
+    ];
+    timeDev(usuarios);
+</script>
+
+</html>

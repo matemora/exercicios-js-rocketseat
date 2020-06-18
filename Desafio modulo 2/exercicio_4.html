@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercício 4 - Módulo 2</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>
+    </div>
+
+    <script>
+        var nomes = ["Diego", "Gabriel", "Lucas"];
+        var myApp = document.querySelector('div#app');
+        var lista = document.createElement('ul');
+        myApp.appendChild(lista);
+        for (var i = 0; i < nomes.length; i++) {
+            var item = document.createElement('li')
+            var itemTexto = document.createTextNode(nomes[i]);
+            item.appendChild(itemTexto);
+            lista.appendChild(item);
+        };
+        myApp.appendChild(lista);
+
+        function adicionar() {
+            var inputElement = document.querySelector('input[name=nome]');
+            var lista = document.querySelector('ul');
+
+            var item = document.createElement('li');
+            var itemTexto = document.createTextNode(inputElement.value);
+
+            item.appendChild(itemTexto);
+            lista.appendChild(item);
+
+            inputElement.value = '';
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Exercício 1 - Módulo 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botaoInserir">Adicionar</button>
+        </div>
+        
+        <script>
+            var botaoElement = document.querySelector('div#app button.botaoInserir');
+            botaoElement.onclick = function() {
+                var meuApp = document.querySelector('#app');
+                var boxElement = document.createElement('div');
+                var numberOfBoxes = document.querySelectorAll('.box');
+                var boxTextElement = document.createTextNode(numberOfBoxes.length+1);
+                boxElement.appendChild(boxTextElement);
+                boxElement.setAttribute('class','box');
+                boxElement.style.width = 100;
+                boxElement.style.height = 100;
+                boxElement.style.backgroundColor = '#F00';
+                boxElement.style.margin = 1;
+                boxElement.style.display = 'flex';
+                boxElement.style.alignItems = 'center';
+                boxElement.style.justifyContent = 'center';
+                meuApp.appendChild(boxElement);
+            };
+        </script>
+    </body>
+</html>
